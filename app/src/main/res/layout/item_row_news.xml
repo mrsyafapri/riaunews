@@ -9,25 +9,25 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/rl_detail"
+        android:id="@+id/rl_item_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:padding="4dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_item_photo"
             android:layout_width="120dp"
-            android:layout_height="95dp"
-            android:layout_marginEnd="8dp"
-            android:elevation="8dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="12dp"
             app:cardCornerRadius="16dp">
 
             <ImageView
-                android:id="@+id/img_item_photo"
+                android:id="@+id/img_item_cover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/cover"
                 android:scaleType="centerCrop"
+                tools:ignore="ImageContrastCheck"
                 tools:src="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
 
@@ -51,6 +51,7 @@
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@id/cv_item_photo"
             android:text="@string/created_at"
+            android:textColor="#2d2d2d"
             android:textSize="12sp"
             android:textStyle="italic" />
 
@@ -66,28 +67,28 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/rl_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/btn_edit"
+            android:id="@+id/btn_item_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/rounded_button"
             android:text="@string/edit"
             app:backgroundTint="@color/primaryLightColor"
-            app:icon="@drawable/ic_baseline_edit_24" />
+            app:icon="@drawable/ic_baseline_edit_24"
+            tools:ignore="TextContrastCheck" />
 
         <Button
-            android:id="@+id/btn_delete"
+            android:id="@+id/btn_item_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_toEndOf="@id/btn_edit"
+            android:layout_toEndOf="@id/btn_item_edit"
             android:background="@drawable/rounded_button"
             android:text="@string/delete"
             app:backgroundTint="#C70000"

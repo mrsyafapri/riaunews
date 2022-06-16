@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser() {
-        progressDialog = ProgressDialog.show(this, null, "Sedang Login", true, false);
+        progressDialog = ProgressDialog.show(this, null, "Sedang login", true, false);
         String username = etUsername.getText().toString();
         String password = etPassword.getText().toString();
         service.login(username, password).enqueue(new Callback<ResponseLogin>() {

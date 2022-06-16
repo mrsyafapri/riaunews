@@ -70,7 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
         requirePermission();
         cvProfile.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-            builder.setTitle("Pilih Photo Profil Anda");
+            builder.setTitle("Pilih Foto Profil Anda");
             builder.setItems(options, (dialog, which) -> {
                 if (options[which].equals("Camera")) {
                     Intent takePic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

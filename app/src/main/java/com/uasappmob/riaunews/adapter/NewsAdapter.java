@@ -111,13 +111,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         }
 
         public void initViews() {
-            rlDetail = itemView.findViewById(R.id.rl_detail);
+            rlDetail = itemView.findViewById(R.id.rl_item_detail);
             tvTitle = itemView.findViewById(R.id.tv_item_title);
             tvCategory = itemView.findViewById(R.id.tv_item_category);
-            imgCover = itemView.findViewById(R.id.img_item_photo);
+            imgCover = itemView.findViewById(R.id.img_item_cover);
             tvCreatedAt = itemView.findViewById(R.id.tv_item_created);
-            btnEdit = itemView.findViewById(R.id.btn_edit);
-            btnRemove = itemView.findViewById(R.id.btn_delete);
+            btnEdit = itemView.findViewById(R.id.btn_item_edit);
+            btnRemove = itemView.findViewById(R.id.btn_item_delete);
         }
     }
 }

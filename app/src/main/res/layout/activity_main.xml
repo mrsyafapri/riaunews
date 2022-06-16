@@ -25,7 +25,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tvFullName"
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/tv02"
@@ -48,17 +48,20 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgPhotoProfile"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_gravity="center"
         android:layout_margin="8dp"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="1dp"
+        tools:ignore="ImageContrastCheck"
         tools:src="@tools:sample/avatars" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginVertical="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/contact_info"
         android:textColor="@color/white" />
 

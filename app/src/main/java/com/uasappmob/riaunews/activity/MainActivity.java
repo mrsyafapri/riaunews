@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvFullName = findViewById(R.id.tvFullName);
+        tvFullName = findViewById(R.id.tv_name);
         tvEmail = findViewById(R.id.tv_email);
         tvPhoneNumber = findViewById(R.id.tv_phone_number);
         photoProfile = findViewById(R.id.imgPhotoProfile);
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         HashMap<String, String> user = sessionManager.getUserDetail();
+
         tvFullName.setText(user.get("name"));
         tvPhoneNumber.setText(user.get("phone_number"));
         tvEmail.setText(user.get("email"));
@@ -93,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Keluar dari Aplikasi?");
-        alertDialogBuilder.setMessage("Klik ya untuk keluar!")
+        alertDialogBuilder.setTitle("Ingin keluar dari aplikasi?");
+        alertDialogBuilder.setMessage("Klik ya untuk keluar")
                 .setCancelable(false)
                 .setPositiveButton("Ya", (dialog, id) -> {
                     moveTaskToBack(true);

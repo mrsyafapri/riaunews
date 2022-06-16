@@ -12,9 +12,29 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/slogan"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="@string/login_please"
         android:textAlignment="center"
+        android:textColor="#2d2d2d"
         android:textSize="28sp" />
 
     <LinearLayout
@@ -38,7 +58,8 @@
                 android:id="@+id/et_login_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,7 +77,8 @@
                 android:id="@+id/et_login_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -67,7 +89,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@drawable/rounded_button"
-        android:text="@string/login" />
+        android:text="@string/login"
+        tools:ignore="TextContrastCheck" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -79,8 +102,9 @@
             android:id="@+id/tv01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="3dp"
-            android:text="@string/is_have_account" />
+            android:layout_marginEnd="4dp"
+            android:text="@string/is_have_account"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_register"
@@ -88,8 +112,9 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/tv01"
             android:text="@string/register"
-            android:textColor="@color/primaryColor" />
+            android:textColor="@color/primaryColor"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
 
     </RelativeLayout>
-
 </LinearLayout>
