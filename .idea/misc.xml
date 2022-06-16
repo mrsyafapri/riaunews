@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1655" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/bg_gradient.xml" value="0.1655" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/border.xml" value="0.2115" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/circle.xml" value="0.1655" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/ic_add_white.xml" value="0.2115" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2115" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1655" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/rounded_button.xml" value="0.162" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/rounded_image.xml" value="0.2105" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/rounded_nav.xml" value="0.1655" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/drawable/splash_background.xml" value="0.1655" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_about.xml" value="0.25" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_create_news.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_detail_news.xml" value="0.25" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_list_news.xml" value="0.25" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_login.xml" value="0.6191904047976012" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_splash_screen.xml" value="0.203125" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_update.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/activity_update_news.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/fragment_account.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/fragment_add.xml" value="0.22" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/fragment_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/item_image.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/item_row_news.xml" value="0.33" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/menu/main.xml" value="0.20416666666666666" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1655" />
+        <entry key="..\:/dev/kuliah-projects/RiauNews/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1655" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

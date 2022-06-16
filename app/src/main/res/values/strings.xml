@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">RiauNews</string>
+    <string name="title_home">Home</string>
+    <string name="title_add">Tambah</string>
+    <string name="title_account">Akun</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create account</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Nomor Telepon</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="photo_profile">Foto Profil</string>
+    <string name="login">Login</string>
+    <string name="login_please">Silakan Login</string>
+    <string name="cover">Cover</string>
+    <string name="is_have_account">Belum memiliki akun?</string>
+    <string name="add_news">Tambah Berita</string>
+    <string name="category">Kategori</string>
+    <string name="content">Konten</string>
+    <string name="title">Judul Berita</string>
+    <string name="salam">Assalamu\'alaikum,</string>
+    <string name="create_account_now">Buat akun sekarang</string>
+    <string name="message_register">Lengkapi data dirimu untuk menjadi wartawan di RiauNews</string>
+    <string name="welcome">Selamat datang di RiauNews</string>
+    <string name="list_news">List Berita</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Hapus</string>
+    <string name="created_at">Dibuat Tanggal</string>
+    <string name="others">Lainnya</string>
+    <string name="edit_news">Edit Berita</string>
+    <string name="about_app">Tentang Aplikasi</string>
+    <string name="created_by">Dibuat Oleh</string>
+    <string name="rizki">Muhamad Rizki Syafapri</string>
+    <string name="contact_info">Informasi Kontak Wartawan Anda</string>
+    <string name="rizki_nim">12050110483</string>
+    <string name="anggi_name">Anggi Angelyna</string>
+    <string name="arif_name">Arif Kurniawan</string>
+    <string name="fikri_name">Mhd.Ikhsanul Fikri</string>
+    <string name="nurhapiza_name">Nurhapiza</string>
+    <string name="empty_news">Tidak Ada Berita</string>
+    <string-array name="category_news">
+        <item>Politik</item>
+        <item>Olahraga</item>
+        <item>Bisnis</item>
+        <item>Kesehatan</item>
+        <item>Otomotif</item>
+        <item>Teknologi</item>
+        <item>Entertainment</item>
+        <item>Finance</item>
+        <item>Pendidikan</item>
+        <item>Religi</item>
+    </string-array>
+</resources>
