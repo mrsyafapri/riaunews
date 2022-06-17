@@ -18,19 +18,18 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_cover"
+                android:id="@+id/cv_update_cover"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="275dp"
                 android:layout_gravity="center"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="5dp">
+                app:cardCornerRadius="8dp">
 
                 <ImageView
-                    android:id="@+id/img_cover"
+                    android:id="@+id/img_update_cover"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/photo_profile"
-                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/cover"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/ic_baseline_image_24" />
             </androidx.cardview.widget.CardView>
 
@@ -43,19 +42,22 @@
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_title"
+                    android:id="@+id/et_update_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="#757575" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Spinner
-                android:id="@+id/sp_category"
+                android:id="@+id/sp_update_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/category_news"
-                android:padding="16dp" />
+                android:padding="16dp"
+                android:prompt="@string/select_category"
+                android:spinnerMode="dialog" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -66,10 +68,11 @@
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_content"
+                    android:id="@+id/et_update_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:textColorHint="#757575" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -80,9 +83,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/line"
             android:layout_centerInParent="true"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="16dp"
             android:background="@drawable/rounded_button"
-            android:text="@string/edit_news" />
+            android:text="@string/edit_news"
+            tools:ignore="TextContrastCheck" />
     </RelativeLayout>
 </ScrollView>

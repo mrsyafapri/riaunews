@@ -19,6 +19,8 @@ import com.uasappmob.riaunews.listener.OnDetailClickListener;
 import com.uasappmob.riaunews.listener.OnUpdateClickListener;
 import com.uasappmob.riaunews.model.News;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -102,12 +104,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         }
 
         public void bind(News item) {
+            Timestamp timestamp = Timestamp.valueOf(item.getCreatedAt());
+            String createdAtFormat = new SimpleDateFormat("EEEE, dd MMMM yyyy").format(timestamp);
+
             tvTitle.setText(item.getTitle());
             tvCategory.setText(item.getCategory());
             Picasso.get()
                     .load(ServerConfig.BASE_URL + "images/news/" + item.getCover())
                     .into(imgCover);
-            tvCreatedAt.setText(item.getCreatedAt());
+            tvCreatedAt.setText(createdAtFormat);
         }
 
         public void initViews() {

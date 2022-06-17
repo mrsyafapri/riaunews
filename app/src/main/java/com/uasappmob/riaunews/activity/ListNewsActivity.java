@@ -35,7 +35,6 @@ import retrofit2.Response;
 public class ListNewsActivity extends AppCompatActivity implements OnDetailClickListener, OnUpdateClickListener, OnDeleteClickListener {
 
     private static final String TAG = ListNewsActivity.class.getSimpleName();
-
     private TextView tvEmptyNews;
     private RecyclerView rvData;
     private FloatingActionButton fabAdd;
@@ -80,7 +79,7 @@ public class ListNewsActivity extends AppCompatActivity implements OnDetailClick
     }
 
     private void loadData() {
-        loading = ProgressDialog.show(this, null, "Sedang memuat data", true, false);
+        loading = ProgressDialog.show(this, null, "Sedang memuat berita", true, false);
         Call<ResponseNews<List<News>>> call = service.getNews();
         call.enqueue(new Callback<ResponseNews<List<News>>>() {
             @Override
@@ -100,7 +99,7 @@ public class ListNewsActivity extends AppCompatActivity implements OnDetailClick
             @Override
             public void onFailure(@NonNull Call<ResponseNews<List<News>>> call, @NonNull Throwable t) {
                 loading.dismiss();
-                Log.e(TAG + ".error", t.toString());
+                Log.e(TAG + ".errorLoad:", t.toString());
                 Toast.makeText(ListNewsActivity.this, "Connection Failed!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -141,7 +140,7 @@ public class ListNewsActivity extends AppCompatActivity implements OnDetailClick
             @Override
             public void onFailure(@NonNull Call<ResponseNews<String>> call, @NonNull Throwable t) {
                 loading.dismiss();
-                Log.e(TAG + ".errorDelete", t.toString());
+                Log.e(TAG + ".errorDelete:", t.toString());
                 Toast.makeText(ListNewsActivity.this, "Connection Failed!", Toast.LENGTH_SHORT).show();
             }
         });

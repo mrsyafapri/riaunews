@@ -60,18 +60,18 @@ public class CreateNewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_news);
 
-        etTitle = findViewById(R.id.etTitle);
-        spCategory = findViewById(R.id.spCategory);
-        etContent = findViewById(R.id.etContent);
-        cvCover = findViewById(R.id.cvCover);
-        imgCover = findViewById(R.id.imgCover);
+        etTitle = findViewById(R.id.et_create_title);
+        spCategory = findViewById(R.id.sp_create_category);
+        etContent = findViewById(R.id.et_create_content);
+        cvCover = findViewById(R.id.cv_create_cover);
+        imgCover = findViewById(R.id.img_create_cover);
         btnSave = findViewById(R.id.btnSave);
 
         service = ApiClient.getClient().create(ApiInterface.class);
         requirePermission();
         cvCover.setOnClickListener(view -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(CreateNewsActivity.this);
-            builder.setTitle("Pilih Photo Cover Berita");
+            builder.setTitle("Pilih Foto Cover Berita");
             builder.setItems(options, (dialogInterface, which) -> {
                 if (options[which].equals("Camera")) {
                     Intent takePic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -99,7 +99,6 @@ public class CreateNewsActivity extends AppCompatActivity {
     }
 
     public void createNews() {
-        Log.d(TAG, "Menjalankan method createNews");
         progressDialog = ProgressDialog.show(this, null, "Sedang membuat Berita", true, false);
         String strTitle = etTitle.getText().toString();
         String strCategory = spCategory.getSelectedItem().toString();
@@ -118,8 +117,6 @@ public class CreateNewsActivity extends AppCompatActivity {
             image = MultipartBody.Part.createFormData("sendimage", "", rbImage);
         }
 
-        Log.d(TAG, "mendapatkan data dari edit text");
-
         Call<ResponseCreate> call = service.createNews(title, category, content, image);
         call.enqueue(new Callback<ResponseCreate>() {
             @Override
@@ -128,7 +125,6 @@ public class CreateNewsActivity extends AppCompatActivity {
                 assert responseCreate != null;
                 if (responseCreate.getStatus()) {
                     progressDialog.dismiss();
-                    Log.d(TAG, "success mendapatkan api");
                     Intent i = new Intent(CreateNewsActivity.this, ListNewsActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     Toast.makeText(CreateNewsActivity.this, responseCreate.getMessage(), Toast.LENGTH_SHORT).show();

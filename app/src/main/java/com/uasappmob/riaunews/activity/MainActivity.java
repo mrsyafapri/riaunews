@@ -15,6 +15,7 @@ import com.uasappmob.riaunews.config.ServerConfig;
 import com.uasappmob.riaunews.utils.SessionManager;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -51,9 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
         HashMap<String, String> user = sessionManager.getUserDetail();
 
+        String phoneNumber = "Nomor Telepon: ";
+        String email = "Email: ";
         tvFullName.setText(user.get("name"));
-        tvPhoneNumber.setText(user.get("phone_number"));
-        tvEmail.setText(user.get("email"));
+        tvPhoneNumber.setText(phoneNumber.concat(Objects.requireNonNull(user.get("phone_number"))));
+        tvEmail.setText(email.concat(Objects.requireNonNull(user.get("email"))));
         Picasso.get()
                 .load(ServerConfig.BASE_URL + "images/users/" + user.get("image"))
                 .into(photoProfile);

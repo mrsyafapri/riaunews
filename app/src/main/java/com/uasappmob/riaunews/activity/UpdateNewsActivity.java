@@ -38,8 +38,8 @@ public class UpdateNewsActivity extends AppCompatActivity {
     ImageView imgCover;
     Button btnUpdate;
 
-    private ProgressDialog progressDialog;
     private static final String TAG = UpdateNewsActivity.class.getSimpleName();
+    private ProgressDialog progressDialog;
     private ApiInterface service;
     private News news;
 
@@ -60,11 +60,11 @@ public class UpdateNewsActivity extends AppCompatActivity {
             news = getIntent().getParcelableExtra(TAG + ".data");
         }
 
-        etTitle = findViewById(R.id.et_title);
-        spCategory = findViewById(R.id.sp_category);
-        etContent = findViewById(R.id.et_content);
-        cvCover = findViewById(R.id.cv_cover);
-        imgCover = findViewById(R.id.img_cover);
+        etTitle = findViewById(R.id.et_update_title);
+        spCategory = findViewById(R.id.sp_update_category);
+        etContent = findViewById(R.id.et_update_content);
+        cvCover = findViewById(R.id.cv_update_cover);
+        imgCover = findViewById(R.id.img_update_cover);
         btnUpdate = findViewById(R.id.btnUpdate);
 
         etTitle.setText(news.getTitle());
@@ -105,8 +105,7 @@ public class UpdateNewsActivity extends AppCompatActivity {
     }
 
     private void updateNews() {
-        Log.d(TAG, "Menjalankan method updateNews");
-        progressDialog = ProgressDialog.show(this, null, "Sedang mengupdate account", true, false);
+        progressDialog = ProgressDialog.show(this, null, "Sedang mengedit berita", true, false);
         String title = etTitle.getText().toString();
         String category = spCategory.getSelectedItem().toString();
         String content = etContent.getText().toString();
@@ -115,16 +114,18 @@ public class UpdateNewsActivity extends AppCompatActivity {
         call.enqueue(new Callback<ResponseCreate>() {
             @Override
             public void onResponse(@NonNull Call<ResponseCreate> call, @NonNull Response<ResponseCreate> response) {
-                Log.d(TAG, "berhasil memanggil api");
-                ResponseCreate responseCreate = response.body();
-                if (response.isSuccessful()) {
+                ResponseCreate responseUpdate = response.body();
+                assert responseUpdate != null;
+                if (responseUpdate.getStatus()) {
                     progressDialog.dismiss();
-                    Log.d(TAG, "success mendapatkan api");
                     Intent i = new Intent(UpdateNewsActivity.this, ListNewsActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    Toast.makeText(UpdateNewsActivity.this, responseCreate.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UpdateNewsActivity.this, responseUpdate.getMessage(), Toast.LENGTH_SHORT).show();
                     startActivity(i);
                     finish();
+                } else {
+                    progressDialog.dismiss();
+                    Toast.makeText(UpdateNewsActivity.this, responseUpdate.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -132,7 +133,7 @@ public class UpdateNewsActivity extends AppCompatActivity {
             public void onFailure(@NonNull Call<ResponseCreate> call, @NonNull Throwable t) {
                 progressDialog.dismiss();
                 Log.e(TAG, t.getLocalizedMessage());
-                Toast.makeText(getApplicationContext(), "Create account failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Connection Failed!", Toast.LENGTH_SHORT).show();
             }
         });
     }
